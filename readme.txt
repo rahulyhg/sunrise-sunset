@@ -1,7 +1,7 @@
 === SunriseSunset ===
 Contributors: rxn
-Tags: sunrise, sunset
-Requires at least: 3.0
+Tags: sunrise, sunset, widget
+Requires at least: 3.1
 Tested up to: 3.5
 Stable tag: 1
 License: GPLv2
@@ -21,3 +21,4 @@ Upload the SunriseSunset plugin to your blog, Activate it, then add it to your s
 1, 2, 3: You're done!
 
 == Changelog ==
+Version 0.1 Initial files of the widget.
