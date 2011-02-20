@@ -5,7 +5,7 @@ Plugin URI: http://rxnfx.com/ss-plugin
 Description: Displays Sunrise and Sunset Times
 Version: 0.1
 Author: Rex Posadas (rexposadas@yahoo.com)
-Author URI: http://www.rxnfx.com
+Author URI: http://www.rxnfx.com/ss-plugin
 */
 
 /*  Copyright 2011  Rex Posadas  (email : rexposadas@yahoo.com)
