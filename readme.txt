@@ -10,7 +10,8 @@ SunriseSunset(ss) displays sunrise and sunset times for the Los Angeles Area.
 
 == Description ==
 
-SS displays sunrise and sunset times.
+This widget displays the sunrise and sunset times for Los Angeles, CA.
+You can set the title of the widget when it gets displayed in the sidebar.
 
 
 == Installation ==
