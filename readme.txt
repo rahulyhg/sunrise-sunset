@@ -3,7 +3,7 @@ Contributors: rxn
 Tags: sunrise, sunset, widget
 Requires at least: 3.1
 Tested up to: 3.5
-Stable tag: 1
+Stable tag: 1.0
 License: GPLv2
 
 SunriseSunset(ss) displays sunrise and sunset times. The three major cities includes are: New York, Chicago and Los Angeles.
@@ -22,4 +22,5 @@ Upload the SunriseSunset plugin to your blog, Activate it, then add it to your s
 1, 2, 3: You're done!
 
 == Changelog ==
-Version 0.1 Initial files of the widget.
+= 1.0 =
+* Initial files.  New York, Los Angeles and Chicago.
