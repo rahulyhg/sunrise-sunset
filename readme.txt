@@ -11,7 +11,7 @@ SunriseSunset(ss) displays sunrise and sunset times. The three major cities incl
 == Description ==
 
 This widget displays the sunrise and sunset times for Chicago, Los Angeles, and New York. You can set the location
-using via a drop down list.
+using a drop down list.
 
 Please email me if you have any questions or requests: rexposadas@yahoo.com
 
