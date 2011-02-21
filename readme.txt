@@ -35,11 +35,9 @@ Here are some:
 2. Better design.
 3. The ability to use custom longitude and latitude.
 
-
 == Screenshots ==
-
-1. You can adjust the title and the city in the Dashboard. The widget uses local time.
-2. The widget displays sunrise and sunset times.  
+1. The widget displays sunrise and sunset times.  
+2. You can adjust the title and the city in the Dashboard. The widget uses local time.
 
 
 == Changelog ==
