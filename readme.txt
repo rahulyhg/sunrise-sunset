@@ -17,7 +17,7 @@ Please email me if you have any questions or requests: rexposadas@yahoo.com
 
 == Installation ==
 
-You install this widget the standard way.
+You install this widget like any normal widget.
 
 1. Upload the SunriseSunset plugin to the /wp-content directory.
 2. Activate it.
