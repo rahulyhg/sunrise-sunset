@@ -21,6 +21,11 @@ Upload the SunriseSunset plugin to your blog, Activate it, then add it to your s
 
 1, 2, 3: You're done!
 
+== Screenshots ==
+
+1. You can adjust the title and the city in the Dashboard. The widget uses local time.
+2. The widget displays sunrise and sunset times.  
+
 == Changelog ==
 = 1.0 =
 * Initial files.  New York, Los Angeles and Chicago.
