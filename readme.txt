@@ -6,7 +6,7 @@ Tested up to: 3.5
 Stable tag: 1.0
 License: GPLv2
 
-SunriseSunset(ss) displays sunrise and sunset times. The three major cities includes are: New York, Chicago and Los Angeles.
+SunriseSunset(ss) displays sunrise and sunset times. The three major cities included are: New York, Chicago and Los Angeles.
 
 == Description ==
 
