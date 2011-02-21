@@ -30,10 +30,10 @@ You install this widget the standard way.
 Yes, you can. Simply email me and I'll try to accomodate your request : rexposadas@yahoo.com
 
 = What updates are planned for this widget? =
-Here are some:
-1. Adding more cities.
-2. Better design.
-3. The ability to use custom longitude and latitude.
+Here are some:<br/>
+1. Adding more cities. <br/>
+2. Better design.<br/>
+3. The ability to use custom longitude and latitude.<br/>
 
 == Screenshots ==
 1. The widget displays sunrise and sunset times.  
