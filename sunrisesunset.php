@@ -3,7 +3,7 @@
 Plugin Name: Sunrise Sunset
 Plugin URI: http://rxnfx.com/ss-plugin
 Description: Displays Sunrise and Sunset Times
-Version: 0.1
+Version: 1.0
 Author: Rex Posadas (rexposadas@yahoo.com)
 Author URI: http://www.rxnfx.com/ss-plugin
 */
