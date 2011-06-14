@@ -1,9 +1,9 @@
 === SunriseSunset ===
 Contributors: rxn
 Tags: sunrise, sunset, widget
-Requires at least: 3.1
+Requires at least: 3.0
 Tested up to: 3.0.5
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2
 
 SunriseSunset(ss) displays sunrise and sunset times. The three major cities included are: New York, Chicago and Los Angeles.
@@ -41,6 +41,9 @@ Here are some:<br/>
 
 
 == Changelog ==
+= 1.0.3 =
+* Added Arizona
+
 = 1.0.1 =
 * Added screenshots.
 * Better readme.

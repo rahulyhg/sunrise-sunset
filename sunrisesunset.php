@@ -80,6 +80,13 @@ class sunrise_sunset extends WP_Widget {
             $select_box .= sprintf('<option value="%s">%s</option>', 'America/Los_Angeles', 'Los_Angeles');
         }
 
+        if ($instance['timezone'] == 'US/Arizona') {
+            $select_box .= sprintf('<option value="%s" selected="yes">%s</option>', 'US/Arizona', 'Arizona');
+        } else {
+            $select_box .= sprintf('<option value="%s">%s</option>', 'US/Arizona', 'Arizona');
+        }
+        // add arizona here
+
         $select_box .= '</select>';
         echo $select_box;
     }
@@ -118,8 +125,11 @@ class sunrise_sunset extends WP_Widget {
 
     function ss_get_sunset($instance) {
 
-        $latitude = array('America/Chicago' => 41.51, 'America/Los_Angeles' => 34.30, 'America/New_York' => 40.47);
-        $longitude = array('America/Chicago' => -87.39, 'America/Los_Angeles' => -118.15, 'America/New_York' => -73.58);
+//        add arizona here
+        $latitude = array('America/Chicago' => 41.51, 'America/Los_Angeles' => 34.30, 'America/New_York' => 40.47, 'US/Arizona' => 33.29);
+        $longitude = array('America/Chicago' => -87.39, 'America/Los_Angeles' => -118.15, 'America/New_York' => -73.58, 'US/Arizona' => -122.04);
+
+
 
         $target_time_zone = $instance['timezone'];
         $time_format = 'h:i A T'; // 08:53 PM PDT
