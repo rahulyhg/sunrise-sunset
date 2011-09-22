@@ -41,7 +41,7 @@ Here are some:<br/>
 
 
 == Changelog ==
-= 1.0.3 =
+= 1.0.4 =
 * Bug Fixes
 
 = 1.0.3 =
