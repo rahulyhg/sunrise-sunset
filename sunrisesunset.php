@@ -53,9 +53,6 @@ class sunrise_sunset extends WP_Widget
 
     private function populateLatLong()
     {
-
-//        $longitude = array('America/Chicago' => -87.39, 'America/Los_Angeles' => -118.15, 'America/New_York' => -73.58, 'US/Arizona' => -122.04);
-
         foreach ($this->_cities as $city) {
             $this->_latitude[$city->getTimezone()] = $city->getLatitude();
             $this->_longitude[$city->getTimezone()] = $city->getLongitude();
@@ -138,17 +135,14 @@ class sunrise_sunset extends WP_Widget
         echo "Sunrise:" . $result['sunrise'] . "<br/>";
         echo "Sunset:" . $result['sunset'];
 
+        //        echo print_r(DateTimeZone::listAbbreviations());
+
         echo $after_widget;
     }
 
 
     function ss_get_sunset($instance)
     {
-
-//        $latitude = populateLatitude();
-//
-//        $longitude = array('America/Chicago' => -87.39, 'America/Los_Angeles' => -118.15, 'America/New_York' => -73.58, 'US/Arizona' => -122.04);
-
         $target_time_zone = $instance['timezone'];
         $time_format = 'h:i A T'; // 08:53 PM PDT
 
