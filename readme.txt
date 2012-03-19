@@ -13,14 +13,13 @@ SunriseSunset(ss) displays sunrise and sunset times. The three major cities incl
 This widget displays the sunrise and sunset times for select cities. You can set the location
 using a drop down list.
 
-In order to add a city please add a line to the cities.txt file. The format of the
-file is
-cityname:timezone:latitude:longitude
+In order to add a city please add a line to the cities.txt file. The file formate is:
+<cityname>:<timezone>:<latitude>:<longitude>
 
 For example:
 Orlando,FL:America/New_York:28.55:-81.33
 
-Logitude is always negative for America Cities.  This plugin should handle cities from different
+Logitude is always negative for cities in the United States.  This plugin should handle cities from different
 countries, but it has not been tested.
 
 
@@ -41,10 +40,18 @@ You install this widget like any normal widget.
 Yes, you can. Simply email me and I'll try to accomodate your request : rexposadas@yahoo.com
 
 = What updates are planned for this widget? =
-Here are some:<br/>
-1. Adding more cities. <br/>
-2. Better design.<br/>
-3. The ability to use custom longitude and latitude.<br/>
+Here are some:
+# Adding more cities.
+# Better design.
+# The ability to use custom longitude and latitude.
+
+= How do I add more cities to this list? =
+Add a line in the cities.txt file with the following format:
+<cityname>:<timezone>:<latitude>:<longitude>
+
+For example:
+Orlando,FL:America/New_York:28.55:-81.33
+
 
 == Screenshots ==
 1. The widget displays sunrise and sunset times.  
@@ -52,6 +59,9 @@ Here are some:<br/>
 
 
 == Changelog ==
+= 1.0.6 =
+* Improved README
+
 = 1.0.5 =
 * Add more cities
 * Can show to display on sunset/sunrise times
