@@ -7,6 +7,6 @@ Los Angeles:America/Los_Angeles:34.30:-118.15
 Lexington, KY:America/New_York:38.05:-85.00
 Miami:America/New_York:25.82:-80.28
 Nashville,TN:America/Chicago:36.12:-86.68
-Orland:America/New_York:28.55:-81.33
+Orlando,FL:America/New_York:28.55:-81.33
 Richmond,VA:America/New_York:37.50:-77.33
 Roanoke Muni,VA:America/New_York:37.32:-79.97

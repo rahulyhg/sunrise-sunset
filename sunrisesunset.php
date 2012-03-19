@@ -96,10 +96,10 @@ class sunrise_sunset extends WP_Widget
         $select_box = sprintf('<select name="%s">', $this->get_field_name('timezone'));
 
         foreach ($this->_cities as $city) {
-            if ($instance['timezone'] == $city->getTimezone()) {
-                $select_box .= sprintf('<option value="%s" selected="yes">%s</option>', $city->getTimezone(), $city->getName());
+            if ($instance['timezone'] == $city->getName()) {
+                $select_box .= sprintf('<option value="%s" selected="yes">%s</option>', $city->getName(), $city->getName());
             } else {
-                $select_box .= sprintf('<option value="%s">%s</option>', $city->getTimezone(), $city->getName());
+                $select_box .= sprintf('<option value="%s">%s</option>', $city->getName(), $city->getName());
             }
         }
 
