@@ -80,6 +80,8 @@ class sunrise_sunset extends WP_Widget
         $instance = wp_parse_args((array)$instance, $defaults);
         $title = strip_tags($instance['title']);
         $timezone = strip_tags($instance['timezone']);
+        $showsunset = strip_tags($instance['showsunset']);
+        $showsunrise = strip_tags($instance['showsunrise']);
 
         ?>
     <p><?php echo 'Title' ?>:
@@ -87,7 +89,7 @@ class sunrise_sunset extends WP_Widget
                type="text" value="<?php echo esc_attr($title); ?>"/>
     </p>
 
-        <p><?php echo 'Cities'; ?>:
+    <p><?php echo 'Cities'; ?>:
 
         <?php
 
@@ -103,6 +105,35 @@ class sunrise_sunset extends WP_Widget
 
         $select_box .= '</select>';
         echo $select_box;
+
+        $field_sunset = $this->get_field_name('showsunset');
+        $field_sunrise = $this->get_field_name('showsunrise');
+
+        $showsunset_checkbox;
+        $showsunrise_checkbox;
+
+        if ($instance['showsunset']) {
+            $showsunset_checkbox = sprintf('<input type="checkbox" name="%s" value="%s" checked/> Display Sunset Time', $field_sunset, $field_sunset);
+        } else {
+            $showsunset_checkbox = sprintf('<input type="checkbox" name="%s" value="%s"/> Display Sunset Time', $field_sunset, $field_sunset);
+        }
+
+        if ($instance['showsunrise']) {
+            $showsunrise_checkbox = sprintf('<input type="checkbox" name="%s" value="%s" checked/> Display Sunrise Time', $field_sunrise, $field_sunrise);
+        } else {
+            $showsunrise_checkbox = sprintf('<input type="checkbox" name="%s" value="%s"/> Display Sunrise Time', $field_sunrise, $field_sunrise);
+        }
+
+        echo "<br/>" . $showsunset_checkbox;
+        echo "<br/>" . $showsunrise_checkbox;
+
+        ?>
+    <p>
+        <br/>
+
+    </p>
+    <?php
+
     }
 
     // save our widget
@@ -111,6 +142,8 @@ class sunrise_sunset extends WP_Widget
         $instance = $old_instance;
         $instance['title'] = strip_tags($new_instance['title']);
         $instance['timezone'] = strip_tags($new_instance['timezone']);
+        $instance['showsunset'] = strip_tags($new_instance['showsunset']);
+        $instance['showsunrise'] = strip_tags($new_instance['showsunrise']);
         return $instance;
     }
 
@@ -132,8 +165,13 @@ class sunrise_sunset extends WP_Widget
         $result = $this->ss_get_sunset($instance);
 
         echo $today . "<br/>";
-        echo "Sunrise:" . $result['sunrise'] . "<br/>";
-        echo "Sunset:" . $result['sunset'];
+        if ($instance["showsunrise"]) {
+            echo "Sunrise:" . $result['sunrise'] . "<br/>";
+        }
+
+        if ($instance["showsunset"]) {
+            echo "Sunset:" . $result['sunset'];
+        }
 
         //        echo print_r(DateTimeZone::listAbbreviations());
 
