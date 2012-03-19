@@ -2,16 +2,27 @@
 Contributors: rxn
 Tags: sunrise, sunset, widget
 Requires at least: 3.0
-Tested up to: 3.0.5
-Stable tag: 1.0.4
+Tested up to: 3.3.1
+Stable tag: 1.0.5
 License: GPLv2
 
 SunriseSunset(ss) displays sunrise and sunset times. The three major cities included are: New York, Chicago and Los Angeles.
 
 == Description ==
 
-This widget displays the sunrise and sunset times for Chicago, Los Angeles, and New York. You can set the location
+This widget displays the sunrise and sunset times for select cities. You can set the location
 using a drop down list.
+
+In order to add a city please add a line to the cities.txt file. The format of the
+file is
+cityname:timezone:latitude:longitude
+
+For example:
+Orlando,FL:America/New_York:28.55:-81.33
+
+Logitude is always negative for America Cities.  This plugin should handle cities from different
+countries, but it has not been tested.
+
 
 Please email me if you have any questions or requests: rexposadas@yahoo.com
 
@@ -41,6 +52,11 @@ Here are some:<br/>
 
 
 == Changelog ==
+= 1.0.5 =
+* Add more cities
+* Can show to display on sunset/sunrise times
+^ Cities are now on files.
+
 = 1.0.4 =
 * Bug Fixes
 
