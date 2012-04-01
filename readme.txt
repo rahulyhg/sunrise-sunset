@@ -1,7 +1,7 @@
 ﻿=== Best Google Adsense ===
 Contributors: rxn
 Donate link: http://jelyhost.com.br/
-Tags: adsense, plugin, post, posts, admin, ads, google, anúncios, propagandas, monetização, ganhar dinheiro, widget adsense, widget
+Tags: adsense, plugin, post, posts, admin, ads, google, anúncios, propagandas, monetização, ganhar dinheiro, widget adsense, widget, sidebar, post, posts
 Requires at least: 3.3.1
 Tested up to: 3.2.1
 Stable tag: 1.0.8
