@@ -1,0 +1,376 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: best-google-adsense\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-04-13 15:00-0300\n"
+"PO-Revision-Date: 2011-04-14 16:29-0300\n"
+"Last-Translator: JelyHost\n"
+"Language-Team: felipe\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: C:\\wamp\\www\\wordpress_new\\wp-content\\plugins\\best-google-adsense\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: google_adsense.php:344
+msgid "Google only allows 3 ads per page view"
+msgstr "O Google só deixa exibir 3 anuncios por página"
+
+#: google_adsense.php:345
+msgid "To this widget works set in Setting> Best Google Adsense -> Ads to the number of 2"
+msgstr "Para esse Widget funcionar configure em Setting > Best Google Adsense o número de anúncios para 2"
+
+#: google_adsense.php:350
+msgid "Dimension"
+msgstr "Dimensão"
+
+#: google_adsense.php:364
+msgid "Type"
+msgstr "Tipo"
+
+#: google_adsense.php:366
+#: google_adsense_admin.php:180
+msgid "Text"
+msgstr "Texto"
+
+#: google_adsense.php:367
+#: google_adsense_admin.php:181
+msgid "Image"
+msgstr "Imagem"
+
+#: google_adsense.php:368
+#: google_adsense_admin.php:182
+msgid "Text & Image"
+msgstr "Texto e Imagem"
+
+#: google_adsense.php:371
+msgid "Custom Channel"
+msgstr "Critérios personalizados"
+
+#: google_adsense.php:372
+msgid "To show the default Custom Chanel leave it blank"
+msgstr "Para mostrar o Canal padrão, deixe o campo em branco"
+
+#: google_adsense_admin.php:2
+#: google_adsense_admin.php:22
+msgid "Settings"
+msgstr "Configurações"
+
+#: google_adsense_admin.php:18
+msgid "Google Adsense Settings"
+msgstr "Configurações Google Adsense"
+
+#: google_adsense_admin.php:27
+msgid "Adsense ID"
+msgstr "Adsense ID do editor"
+
+#: google_adsense_admin.php:29
+msgid "To display ads from Google Adsense is required to enter your Adsense ID. Your ID can be found in your <a href=\"https://www.google.com/adsense\">Adsense panel</a> on the \"Home\" tab and in the sidebar \"Account Settings\". Eg: pub-4268725654361605"
+msgstr "Para exibir os anúncios do Google Adsense é necessário inserir o seu ID do editor. O mesmo pode ser encontrado em seu <a href=\"https://www.google.com/adsense\">Painel do Adsense</a> na aba \"Página Inicial\" e no menu lateral \"Configurações da conta\". Exemplo de ID do editor: pub-4268725654361605"
+
+#: google_adsense_admin.php:31
+msgid "Adsense ID is the unique identifier of your account at Google Adsense."
+msgstr "ID do editor é o identificador único da sua conta no Google Adsense"
+
+#: google_adsense_admin.php:40
+msgid "Custom Channels <span class=\"optional\">(Optional)</span>"
+msgstr "Critérios personalizados <span class=\"optional\">(Opcional)</span>"
+
+#: google_adsense_admin.php:41
+msgid "Allows you to define groups of ads for better tracking."
+msgstr "Permite definir grupos de anuncios para um melhor rastreamento."
+
+#: google_adsense_admin.php:52
+#: google_adsense_admin.php:231
+msgid "Wait"
+msgstr "Aguarde"
+
+#: google_adsense_admin.php:54
+#: google_adsense_admin.php:233
+msgid "Save Changes"
+msgstr "Salvar Alterações"
+
+#: google_adsense_admin.php:70
+msgid "General Settings"
+msgstr "Configuração Geral"
+
+#: google_adsense_admin.php:78
+msgid "Display Configuration"
+msgstr "Configuração de Visualização"
+
+#: google_adsense_admin.php:82
+msgid "Border"
+msgstr "Borda"
+
+#: google_adsense_admin.php:85
+msgid "Normal"
+msgstr "Normal"
+
+#: google_adsense_admin.php:86
+msgid "Rounded"
+msgstr "Arredondada"
+
+#: google_adsense_admin.php:92
+msgid "Ad size"
+msgstr "Dimensões do Anúncio"
+
+#: google_adsense_admin.php:94
+msgid "Choose more than one to display random. <br /> (Width x Height)"
+msgstr "Escolha mais de um para mostrar aleatório.<br />(Largura x Altura)"
+
+#: google_adsense_admin.php:115
+msgid "Colors"
+msgstr "Cores"
+
+#: google_adsense_admin.php:122
+msgid "Border color"
+msgstr "Cor da Borda"
+
+#: google_adsense_admin.php:127
+msgid "Background color"
+msgstr "Cor de fundo"
+
+#: google_adsense_admin.php:131
+msgid "Link color"
+msgstr "Cor do link"
+
+#: google_adsense_admin.php:135
+msgid "Text color"
+msgstr "Cor do texto"
+
+#: google_adsense_admin.php:139
+msgid "Url color"
+msgstr "Cor da url"
+
+#: google_adsense_admin.php:149
+msgid "Number of ads per Page"
+msgstr "Quantidade de anúncios por Página"
+
+#: google_adsense_admin.php:162
+msgid "Number of ads per Post"
+msgstr "Quantidade de anúncios por Post"
+
+#: google_adsense_admin.php:176
+msgid "Ad type"
+msgstr "Tipo de Anúncio"
+
+#: google_adsense_admin.php:188
+msgid "Ad Placement"
+msgstr "Posicionamento do anúncio"
+
+#: google_adsense_admin.php:192
+msgid "Center"
+msgstr "Centralizado"
+
+#: google_adsense_admin.php:193
+msgid "Left"
+msgstr "Esquerda"
+
+#: google_adsense_admin.php:194
+msgid "Right"
+msgstr "Direita"
+
+#: google_adsense_admin.php:195
+msgid "Top/Center"
+msgstr "Centralizado no topo"
+
+#: google_adsense_admin.php:196
+msgid "Top/Left"
+msgstr "Esquerda no topo"
+
+#: google_adsense_admin.php:197
+msgid "Top/Right"
+msgstr "Direita no topo"
+
+#: google_adsense_admin.php:198
+msgid "Bottom/Center"
+msgstr "Centralizado ao final"
+
+#: google_adsense_admin.php:199
+msgid "Bottom/Left"
+msgstr "Esquerda ao final"
+
+#: google_adsense_admin.php:200
+msgid "Bottom/Right"
+msgstr "Direita ao final"
+
+#: google_adsense_admin.php:206
+msgid "Do not show ads on these Pages"
+msgstr "Não mostrar anúncios nas seguintes páginas"
+
+#: google_adsense_admin.php:209
+msgid "Home Page"
+msgstr "Página Principal (Home)"
+
+#: google_adsense_admin.php:210
+msgid "Static Pages"
+msgstr "Páginas Estáticas"
+
+#: google_adsense_admin.php:211
+msgid "Posts Pages"
+msgstr "Páginas de Posts"
+
+#: google_adsense_admin.php:212
+msgid "Category Pages"
+msgstr "Páginas de Categorias"
+
+#: google_adsense_admin.php:213
+msgid "Archive Pages"
+msgstr "Página de Arquivo"
+
+#: google_adsense_admin.php:218
+msgid "Donation"
+msgstr "Doação"
+
+#: google_adsense_admin.php:219
+msgid "The default donation rate is 5%. To disable the donation system fill in 0%."
+msgstr "O valor de doação padrão é de 5%. Para não realizar doação para o desenvolvedor, deixe o valor em 0%"
+
+#~ msgid "This will cause conflict"
+#~ msgstr "Isto vai causar conflito"
+
+#~ msgid "O Google só deixa exibir 3 anuncios por página"
+#~ msgstr "Google only allows 3 ads per page view"
+
+#~ msgid ""
+#~ "Para esse Widget funcionar configure em Setting > Best Google Adsense o "
+#~ "número de anúncios para 2"
+#~ msgstr ""
+#~ "To this widget works set in Setting> Best Google Adsense -> Ads to the "
+#~ "number of 2"
+
+#~ msgid "Tipo"
+#~ msgstr "Type"
+
+#~ msgid "Configurações"
+#~ msgstr "Settings"
+
+#~ msgid "Language"
+#~ msgstr "Language"
+
+#~ msgid "Configurações Google Adsense"
+#~ msgstr "Google Adsense Settings"
+
+#~ msgid ""
+#~ "Para exibir os anúncios do Google Adsense é necessário inserir o seu ID "
+#~ "do editor. O mesmo pode ser encontrado em seu <a href=\"https://www."
+#~ "google.com/adsense\">Painel do Adsense</a> na aba \"Página Inicial\" e no "
+#~ "menu lateral \"Confirações da conta\". Exemplo de ID do editor: pub-"
+#~ "4268725654361605"
+#~ msgstr ""
+#~ "To display ads from Google Adsense is required to enter your Adsense ID. "
+#~ "Your ID can be found in your <a href=\"https://www.google.com/adsense"
+#~ "\">Adsense panel</a> on the \"Home\" tab and in the sidebar \"Account "
+#~ "Settings\". Eg: pub-4268725654361605"
+
+#~ msgid "ID do editor é o identificador único da sua conta no Google Adsense"
+#~ msgstr ""
+#~ "Adsense ID is the unique identifier of your account at Google Adsense."
+
+#~ msgid "Permite definir grupos de anuncios para um melhor rastreamento."
+#~ msgstr "Allows you to define groups of ads for better tracking."
+
+#~ msgid "Aguarde"
+#~ msgstr "Wait"
+
+#~ msgid "Salvar Alterações"
+#~ msgstr "Save Changes"
+
+#~ msgid "Configuração Geral"
+#~ msgstr "General Settings"
+
+#~ msgid "Configuração de Visualização"
+#~ msgstr "Display Configuration"
+
+#~ msgid "Arredondada"
+#~ msgstr "Rounded"
+
+#~ msgid "Dimensões do Anúncio"
+#~ msgstr "Ad size"
+
+#~ msgid "Escolha mais de um para mostrar aleatório.<br />(Largura x Altura)"
+#~ msgstr "Choose more than one to display random. <br /> (Width x Height)"
+
+#~ msgid "Cor da Borda"
+#~ msgstr "Border color"
+
+#~ msgid "Cor de fundo"
+#~ msgstr "Background color"
+
+#~ msgid "Cor do link"
+#~ msgstr "Link color"
+
+#~ msgid "Cor do texto"
+#~ msgstr "Text color"
+
+#~ msgid "Cor da url"
+#~ msgstr "Url color"
+
+#~ msgid "Quantidade de anúncios por Página"
+#~ msgstr "Number of ads per Page"
+
+#~ msgid "Quantidade de anúncios por Post"
+#~ msgstr "Number of ads per Post"
+
+#~ msgid "Tipo de Anúncio"
+#~ msgstr "Ad type"
+
+#~ msgid "Posicionamento do anúncio"
+#~ msgstr "Ad Placement"
+
+#~ msgid "Centralizado"
+#~ msgstr "Center"
+
+#~ msgid "Esquerda"
+#~ msgstr "Left"
+
+#~ msgid "Direita"
+#~ msgstr "Right"
+
+#~ msgid "Centralizado no topo"
+#~ msgstr "Top/Center"
+
+#~ msgid "Esquerda no topo"
+#~ msgstr "Top/Left"
+
+#~ msgid "Direita no topo"
+#~ msgstr "Top/Right"
+
+#~ msgid "Centralizado ao final"
+#~ msgstr "Bottom/Center"
+
+#~ msgid "Esquerda ao final"
+#~ msgstr "Bottom/Left"
+
+#~ msgid "Direita ao final"
+#~ msgstr "Bottom/Right"
+
+#~ msgid "Não mostrar anúncios nas seguintes páginas"
+#~ msgstr "Do not show ads on these Pages"
+
+#~ msgid "Página Principal (Home)"
+#~ msgstr "Home Page"
+
+#~ msgid "Páginas Estáticas"
+#~ msgstr "Static Pages"
+
+#~ msgid "Páginas de Posts"
+#~ msgstr "Posts Pages"
+
+#~ msgid "Páginas de Categorias"
+#~ msgstr "Category Pages"
+
+#~ msgid "Página de Arquivo"
+#~ msgstr "Archive Pages"
+
+#~ msgid "Doação"
+#~ msgstr "Donation"
+
+#~ msgid ""
+#~ "O valor de doação padrão é de 5%. Para não realizar doação para o "
+#~ "desenvolvedor, deixe o valor em 0%"
+#~ msgstr ""
+#~ "The default donation rate is 5%. To disable the donation system fill in "
+#~ "0%."
