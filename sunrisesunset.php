@@ -3,7 +3,7 @@
 Plugin Name: Sunrise Sunset
 Plugin URI: http://wordpress.org/extend/plugins/sunrise-sunset/
 Description: Displays Sunrise and Sunset Times
-Version: 1.0.7
+Version: 1.0.8
 Author: Rex Posadas (rexposadas@yahoo.com)
 Author URI: http://www.rxnfx.com/ss-plugin
 */
@@ -46,19 +46,10 @@ class sunrise_sunset extends WP_Widget
         $lines = file(dirname(__FILE__) . '/cities.txt');
         foreach ($lines as $line) {
             $pieces = explode(":", $line);
-            $this->_cities[] = new City($pieces[0], $pieces[1], $pieces[2], $pieces[3]);
+            $this->_cities[$pieces[0]] = new City($pieces[0], $pieces[1], $pieces[2]);
         }
     }
 
-
-    private function populateLatLong()
-    {
-        foreach ($this->_cities as $city) {
-            $this->_latitude[$city->getTimezone()] = $city->getLatitude();
-            $this->_longitude[$city->getTimezone()] = $city->getLongitude();
-        }
-
-    }
 
     function sunrise_sunset()
     {
@@ -68,18 +59,16 @@ class sunrise_sunset extends WP_Widget
         $this->WP_Widget('ss_widget_bio', 'Sunrise Sunset', $widget_ops);
 
         $this->populateCities();
-        $this->populateLatLong();
     }
 
     function form($instance)
     {
         $defaults = array(
             'title' => 'Sunrise Sunset Times',
-            'timezone' => 'Time Zone', 'ss-plugin');
+            'ss-plugin');
 
         $instance = wp_parse_args((array)$instance, $defaults);
         $title = strip_tags($instance['title']);
-        $timezone = strip_tags($instance['timezone']);
         $showsunset = strip_tags($instance['showsunset']);
         $showsunrise = strip_tags($instance['showsunrise']);
 
@@ -93,10 +82,10 @@ class sunrise_sunset extends WP_Widget
 
         <?php
 
-        $select_box = sprintf('<select name="%s">', $this->get_field_name('timezone'));
+        $select_box = sprintf('<select name="%s">', $this->get_field_name('city'));
 
         foreach ($this->_cities as $city) {
-            if ($instance['timezone'] == $city->getName()) {
+            if ($instance['city'] == $city->getName()) {
                 $select_box .= sprintf('<option value="%s" selected="yes">%s</option>', $city->getName(), $city->getName());
             } else {
                 $select_box .= sprintf('<option value="%s">%s</option>', $city->getName(), $city->getName());
@@ -141,7 +130,7 @@ class sunrise_sunset extends WP_Widget
     {
         $instance = $old_instance;
         $instance['title'] = strip_tags($new_instance['title']);
-        $instance['timezone'] = strip_tags($new_instance['timezone']);
+        $instance['city'] = strip_tags($new_instance['city']);
         $instance['showsunset'] = strip_tags($new_instance['showsunset']);
         $instance['showsunrise'] = strip_tags($new_instance['showsunrise']);
         return $instance;
@@ -162,7 +151,7 @@ class sunrise_sunset extends WP_Widget
         }
 
 
-        $result = $this->ss_get_sunset($instance);
+        $result = $this->ss_get_times($instance);
 
         echo $today . "<br/>";
         if ($instance["showsunrise"]) {
@@ -173,37 +162,22 @@ class sunrise_sunset extends WP_Widget
             echo "Sunset:" . $result['sunset'];
         }
 
-        //        echo print_r(DateTimeZone::listAbbreviations());
-
         echo $after_widget;
     }
 
 
-    function ss_get_sunset($instance)
+    function ss_get_times($instance)
     {
-        $target_time_zone = $instance['timezone'];
-        $time_format = 'h:i A T'; // 08:53 PM PDT
+        $time_format = 'h:i A';
 
-        $zenith = 90 + (50 / 60);
+        $lat = $this->_cities[$instance['city']]->getLatitude();
+        $long = $this->_cities[$instance['city']]->getLongitude();
 
-        // Set timezone in PHP5/PHP4 manner
-        if (!function_exists('date_default_timezone_set')) {
-            putenv("TZ=" . $target_time_zone);
-        } else {
-            date_default_timezone_set("$target_time_zone");
-        }
+//        $suninfo = date_sun_info(time(), floatval($lat), floatval($long));
+        $suninfo = date_sun_info(time(), floatval($long), floatval($lat));
 
-        // find time offset in hours
-        $tzoffset = date("Z") / 60 / 60;
-
-        // determine sunrise time
-        $sunrise = date_sunrise(time(), SUNFUNCS_RET_STRING, $this->_latitude[$target_time_zone], $this->_longitude[$target_time_zone], $zenith, $tzoffset);
-        $sunrise_time = date($time_format, strtotime(date("Y-m-d") . ' ' . $sunrise));
-
-
-        // determine sunset time
-        $sunset = date_sunset(time(), SUNFUNCS_RET_STRING, $this->_latitude[$target_time_zone], $this->_longitude[$target_time_zone], $zenith, $tzoffset);
-        $sunset_time = date($time_format, strtotime(date("Y-m-d") . ' ' . $sunset));
+        $sunrise_time = date($time_format, $suninfo['sunrise']);
+        $sunset_time = date($time_format, $suninfo['sunset']);
 
         return array('sunrise' => $sunrise_time, 'sunset' => $sunset_time);
     }

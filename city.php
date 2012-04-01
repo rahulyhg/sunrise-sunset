@@ -4,14 +4,12 @@ class City
 {
 
     private $name;
-    private $timezone;
     private $latitude;
     private $longitude;
 
-    function __construct($name, $timezone, $latitude, $longitude)
+    function __construct($name, $latitude, $longitude)
     {
         $this->name = $name;
-        $this->timezone = $timezone;
         $this->latitude = $latitude;
         $this->longitude = $longitude;
     }
@@ -45,15 +43,5 @@ class City
     public function getName()
     {
         return $this->name;
-    }
-
-    public function setTimezone($timezone)
-    {
-        $this->timezone = $timezone;
-    }
-
-    public function getTimezone()
-    {
-        return $this->timezone;
     }
 }

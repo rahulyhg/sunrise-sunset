@@ -1,12 +1,12 @@
-Arizona:America/Phoenix:33.29:-122.04
-Atlanta:America/New_York:33.65:-84.42
-Charlotte,NC:America/New_York:35.22:-80.93
-Chicago:America/Chicago:41.51:-87.39
-Crossville,TN:America/Chicago:35.95:-85.08
-Los Angeles:America/Los_Angeles:34.30:-118.15
-Lexington, KY:America/New_York:38.05:-85.00
-Miami:America/New_York:25.82:-80.28
-Nashville,TN:America/Chicago:36.12:-86.68
-Orlando,FL:America/New_York:28.55:-81.33
-Richmond,VA:America/New_York:37.50:-77.33
-Roanoke Muni,VA:America/New_York:37.32:-79.97
+Arizona:33.29:-122.04
+Atlanta:33.65:-84.42
+Charlotte,NC:35.22:-80.93
+Chicago:41.51:-87.39
+Crossville,TN:35.95:-85.08
+Los Angeles:34.30:-118.15
+Lexington, KY:38.05:-85.00
+Miami:25.82:-80.28
+Nashville,TN:36.12:-86.68
+Orlando,FL:28.55:-81.33
+Richmond,VA:37.50:-77.33
+Roanoke Muni,VA:37.32:-79.97
