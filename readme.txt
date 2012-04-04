@@ -6,28 +6,26 @@ Tested up to: 3.3.1
 Stable tag: 1.1.2
 License: GPLv2
 
-SunriseSunset displays sunrise and sunset times for the capital cities of the America (including miscellaneous cities).
+Displays sunrise and sunset times for the capital cities of the America (including miscellaneous cities).
 Times displayed are local time.
 
 I would love to hear from you: rexposadas@yahoo.com
 
-
 == Description ==
-
-This widget displays the sunrise and sunset times for select cities.
+Displays sunrise and sunset times for the capital cities of the America (including miscellaneous cities).
+Times displayed are local time.
 
 IF YOU ARE UPGRADING please change the settings of the widget in the dashboard right after upgrading.
 
-IF YOU ARE A DESIGNER: I am looking for someone to help me skin the widget.  I'll add you to the list of contributes
-if you help make the widget look presentable.
+IF YOU ARE A DESIGNER: I am looking for someone to help me skin the widget.  I'll add you to the list of contributors.
 
 Please email me if you have any questions or requests: rexposadas@yahoo.com
 
 Options includes:
-1) What city to display.
-2) Should sunrise be displayed?
-3) Should sunset be displayed?
-4) The title display at the top of the widget.
+* What city to display.
+* Should sunrise be displayed?
+* Should sunset be displayed?
+* The title display at the top of the widget.
 
 
 == Installation ==
