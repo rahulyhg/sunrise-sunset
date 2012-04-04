@@ -2,46 +2,69 @@
 
 class City
 {
+    private $_name;
+    private $_latitude;
+    private $_longitude;
+    private $_timezone;
+    private $_summerTimezone;
 
-    private $name;
-    private $latitude;
-    private $longitude;
-
-    function __construct($name, $latitude, $longitude)
+    function __construct($name, $latitude, $longitude, $timezone, $summerTimezone)
     {
-        $this->name = $name;
-        $this->latitude = $latitude;
-        $this->longitude = $longitude;
+        $this->_name = $name;
+        $this->_latitude = $latitude;
+        $this->_longitude = $longitude;
+        $this->_timezone = $timezone;
+        $this->_summerTimezone = $summerTimezone;
     }
 
 
+    public function setSummerTimezone($summerTimezone)
+    {
+        $this->_summerTimezone = $summerTimezone;
+    }
+
+    public function getSummerTimezone()
+    {
+        return $this->_summerTimezone;
+    }
+
+    public function setTimezone($timezone)
+    {
+        $this->_timezone = $timezone;
+    }
+
+    public function getTimezone()
+    {
+        return $this->_timezone;
+    }
+
     public function setLatitude($latitude)
     {
-        $this->latitude = $latitude;
+        $this->_latitude = $latitude;
     }
 
     public function getLatitude()
     {
-        return $this->latitude;
+        return $this->_latitude;
     }
 
     public function setLongitude($longitude)
     {
-        $this->longitude = $longitude;
+        $this->_longitude = $longitude;
     }
 
     public function getLongitude()
     {
-        return $this->longitude;
+        return $this->_longitude;
     }
 
     public function setName($name)
     {
-        $this->name = $name;
+        $this->_name = $name;
     }
 
     public function getName()
     {
-        return $this->name;
+        return $this->_name;
     }
 }

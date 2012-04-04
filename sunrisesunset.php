@@ -3,7 +3,7 @@
 Plugin Name: Sunrise Sunset
 Plugin URI: http://wordpress.org/extend/plugins/sunrise-sunset/
 Description: Displays Sunrise and Sunset Times
-Version: 1.0.8
+Version:  1.0.9
 Author: Rex Posadas (rexposadas@yahoo.com)
 Author URI: http://www.rxnfx.com/ss-plugin
 */
@@ -36,17 +36,15 @@ function register_sunrise_sunset()
 
 class sunrise_sunset extends WP_Widget
 {
-
     private $_cities;
-    private $_latitude;
-    private $_longitude;
 
     private function populateCities()
     {
         $lines = file(dirname(__FILE__) . '/cities.txt');
         foreach ($lines as $line) {
             $pieces = explode(":", $line);
-            $this->_cities[$pieces[0]] = new City($pieces[0], $pieces[1], $pieces[2]);
+            if ($pieces[0] == 'city') continue;
+            $this->_cities[$pieces[0]] = new City($pieces[0], $pieces[1], $pieces[2], $pieces[3], $pieces[4]);
         }
     }
 
@@ -165,19 +163,56 @@ class sunrise_sunset extends WP_Widget
         echo $after_widget;
     }
 
+    private function convertTimezone($timestamp, $city)
+    {
+        $newTimestamp = 0;
+
+        switch ($city->getTimezone()) {
+            case 'EST':
+                $newTimestamp = $timestamp - (5 * 60 * 60);
+                break;
+            case 'EDT':
+                $newTimestamp = $timestamp - (4 * 60 * 60);
+                break;
+            case 'MST':
+                $newTimestamp = $timestamp - (7 * 60 * 60);
+                break;
+            case 'CST':
+                $newTimestamp = $timestamp - (6 * 60 * 60);
+                break;
+            case 'CDT':
+                $newTimestamp = $timestamp - (5 * 60 * 60);
+                break;
+            case 'PST':
+                $newTimestamp = $timestamp - (8 * 60 * 60);
+                break;
+            case 'PDT':
+                $newTimestamp = $timestamp - (7 * 60 * 60);
+                break;
+        }
+
+        $time_format = 'h:i A';
+
+        $olddate = date($time_format, $timestamp);
+        $newdate = date($time_format, $newTimestamp);
+
+
+        return $newTimestamp;
+    }
+
 
     function ss_get_times($instance)
     {
         $time_format = 'h:i A';
+        $targetCity = $this->_cities[$instance['city']];
 
-        $lat = $this->_cities[$instance['city']]->getLatitude();
-        $long = $this->_cities[$instance['city']]->getLongitude();
+        $lat = $targetCity->getLatitude();
+        $long = $targetCity->getLongitude();
 
-//        $suninfo = date_sun_info(time(), floatval($lat), floatval($long));
-        $suninfo = date_sun_info(time(), floatval($long), floatval($lat));
+        $suninfo = date_sun_info(time(), $lat, $long);
 
-        $sunrise_time = date($time_format, $suninfo['sunrise']);
-        $sunset_time = date($time_format, $suninfo['sunset']);
+        $sunrise_time = date($time_format, $this->convertTimezone($suninfo['sunrise'], $targetCity));
+        $sunset_time = date($time_format, $this->convertTimezone($suninfo['sunset'], $targetCity));
 
         return array('sunrise' => $sunrise_time, 'sunset' => $sunset_time);
     }

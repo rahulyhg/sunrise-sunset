@@ -3,7 +3,7 @@ Contributors: rxn
 Tags: sunrise, sunset, widget
 Requires at least: 3.0
 Tested up to: 3.3.1
-Stable tag: 1.0.8
+Stable tag: 1.0.9
 License: GPLv2
 
 SunriseSunset(ss) displays sunrise and sunset times. The three major cities included are: New York, Chicago and Los Angeles.
@@ -13,13 +13,13 @@ SunriseSunset(ss) displays sunrise and sunset times. The three major cities incl
 This widget displays the sunrise and sunset times for select cities. You can set the location
 using a drop down list.
 
-In order to add a city please add a line to the cities.txt file. The file formate is:
-<cityname>:<timezone>:<latitude>:<longitude>
+To Add a city go to city.txt and add a line with the following format:
+<city>:<latitude>:<longitude>:<timezone>:<summertimezone>
 
 For example:
-Orlando,FL:America/New_York:28.55:-81.33
+Miami, FL:25.82:-80.28:EST:EDT
 
-Logitude is always negative for cities in the United States.  This plugin should handle cities from different
+Logitude is always negative for cities  in the United States.  This plugin should handle cities from different
 countries, but it has not been tested.
 
 
@@ -47,10 +47,10 @@ Here are some:
 
 = How do I add more cities to this list? =
 Add a line in the cities.txt file with the following format:
-<cityname>:<timezone>:<latitude>:<longitude>
+<city>:<latitude>:<longitude>:<timezone>:<summertimezone>
 
 For example:
-Orlando,FL:America/New_York:28.55:-81.33
+Miami, FL:25.82:-80.28:EST:EDT
 
 
 == Screenshots ==
@@ -59,6 +59,9 @@ Orlando,FL:America/New_York:28.55:-81.33
 
 
 == Changelog ==
+= 1.0.9 =
+* Fixed times for most cities.
+
 = 1.0.8 =
 * Removed hacked code - reported to WordPress.org forums
 
