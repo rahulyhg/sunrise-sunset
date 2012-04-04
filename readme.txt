@@ -6,8 +6,8 @@ Tested up to: 3.3.1
 Stable tag: 1.1.3
 License: GPLv2
 
-Displays sunrise and sunset times for the capital cities of the America (including miscellaneous cities).
-Times displayed are local time.
+Displays sunrise and sunset times for the capital cities in America (including miscellaneous cities).
+Local times are displayed.
 
 == Description ==
 Displays sunrise and sunset times for the capital cities of the America (including miscellaneous cities).
