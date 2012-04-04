@@ -3,7 +3,7 @@
 Plugin Name: Sunrise Sunset
 Plugin URI: http://wordpress.org/extend/plugins/sunrise-sunset/
 Description: Displays Sunrise and Sunset Times
-Version:  1.1.3
+Version:  1.1.4
 Author: Rex Posadas (rexposadas@yahoo.com)
 Author URI: http://www.rxnfx.com/ss-plugin
 */
@@ -58,6 +58,7 @@ class sunrise_sunset extends WP_Widget
         $title = strip_tags($instance['title']);
         $showsunset = strip_tags($instance['showsunset']);
         $showsunrise = strip_tags($instance['showsunrise']);
+        $friday = strip_tags($instance['showfriday']);
 
         ?>
     <p><?php echo 'Title' ?>:
@@ -84,24 +85,34 @@ class sunrise_sunset extends WP_Widget
 
         $field_sunset = $this->get_field_name('showsunset');
         $field_sunrise = $this->get_field_name('showsunrise');
+        $field_friday = $this->get_field_name('showfriday');
 
-        $showsunset_checkbox;
-        $showsunrise_checkbox;
+        $sunset_checkbox;
+        $sunrise_checkbox;
+        $friday_checkbox;
 
         if ($instance['showsunset']) {
-            $showsunset_checkbox = sprintf('<input type="checkbox" name="%s" value="%s" checked/> Display Sunset Time', $field_sunset, $field_sunset);
+            $sunset_checkbox = sprintf('<input type="checkbox" name="%s" value="%s" checked/> Display Sunset Time', $field_sunset, $field_sunset);
         } else {
-            $showsunset_checkbox = sprintf('<input type="checkbox" name="%s" value="%s"/> Display Sunset Time', $field_sunset, $field_sunset);
+            $sunset_checkbox = sprintf('<input type="checkbox" name="%s" value="%s"/> Display Sunset Time', $field_sunset, $field_sunset);
         }
 
         if ($instance['showsunrise']) {
-            $showsunrise_checkbox = sprintf('<input type="checkbox" name="%s" value="%s" checked/> Display Sunrise Time', $field_sunrise, $field_sunrise);
+            $sunrise_checkbox = sprintf('<input type="checkbox" name="%s" value="%s" checked/> Display Sunrise Time', $field_sunrise, $field_sunrise);
         } else {
-            $showsunrise_checkbox = sprintf('<input type="checkbox" name="%s" value="%s"/> Display Sunrise Time', $field_sunrise, $field_sunrise);
+            $sunrise_checkbox = sprintf('<input type="checkbox" name="%s" value="%s"/> Display Sunrise Time', $field_sunrise, $field_sunrise);
         }
 
-        echo "<br/>" . $showsunset_checkbox;
-        echo "<br/>" . $showsunrise_checkbox;
+        if ($instance['showfriday']) {
+            $friday_checkbox = sprintf('<input type="checkbox" name="%s" value="%s" checked/> Display only Friday', $field_friday, $field_friday);
+        } else {
+            $friday_checkbox = sprintf('<input type="checkbox" name="%s" value="%s"/> Display only Friday', $field_friday, $field_friday);
+        }
+
+
+        echo "<br/>" . $sunrise_checkbox;
+        echo "<br/>" . $sunset_checkbox;
+        echo "<br/>" . $friday_checkbox;
 
         ?>
     <p>
@@ -119,10 +130,15 @@ class sunrise_sunset extends WP_Widget
         $instance['city'] = strip_tags($new_instance['city']);
         $instance['showsunset'] = strip_tags($new_instance['showsunset']);
         $instance['showsunrise'] = strip_tags($new_instance['showsunrise']);
+        $instance['showfriday'] = strip_tags($new_instance['showfriday']);
         return $instance;
     }
 
-    // display our widget
+    /**
+     * The Front end of our widget.
+     * @param $args
+     * @param $instance
+     */
     function widget($args, $instance)
     {
         extract($args);
@@ -136,7 +152,10 @@ class sunrise_sunset extends WP_Widget
             echo $before_title . $title . $after_title;
         }
 
-        $result = SSUtils::getTimes($instance, $this->_cities);
+        $showOnlyFriday = $instance['showfriday']? true: false;
+
+
+        $result = SSUtils::getTimes($instance, $this->_cities, $showOnlyFriday);
 
         echo $today . "<br/>";
         if ($instance["showsunrise"]) {

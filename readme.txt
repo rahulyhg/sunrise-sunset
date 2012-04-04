@@ -3,7 +3,7 @@ Contributors: rxn
 Tags: sunrise, sunset, widget
 Requires at least: 3.0
 Tested up to: 3.3.1
-Stable tag: 1.1.3
+Stable tag: 1.1.4
 License: GPLv2
 
 Displays sunrise and sunset times for the capital cities in America (including miscellaneous cities).
@@ -12,6 +12,8 @@ Local times are displayed.
 == Description ==
 Displays sunrise and sunset times for the capital cities of the America (including miscellaneous cities).
 Times displayed are local time.
+
+You can also set the sunrise/sunset times for only Friday.
 
 IF YOU ARE UPGRADING please change the settings of the widget in the dashboard right after upgrading.
 
@@ -45,6 +47,10 @@ You can write to me at rexposadas@yahoo.com.  Or send me a patch.
 
 I will try to accommodate you ASAP.
 
+= Why is there an options to limit the sunrise/sunset display to only Friday? =
+These times are important for certain religious denomination.
+
+
 = What updates are planned for this widget? =
 Here are some:
 1. Better design.
@@ -64,8 +70,9 @@ Miami, FL:25.82:-80.28:EST:EDT
 2. You can adjust the title and the city in the Dashboard. The widget uses local time.
 
 == Changelog ==
-= 1.1.3 =
-* Updated README and screenshot.
+= 1.1.4 =
+* Added "Friday" feature.
+* Added Timezone in Display.
 
 = 1.1.2 =
 * Added all capital cities of America.

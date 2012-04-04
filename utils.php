@@ -58,7 +58,47 @@ class SSUtils
         return array("timestamp" => $newTimestamp, "timezone" => $currentTimezone);
     }
 
-    static public function getTimes($instance, $cities)
+
+    static public function getTime($onlyFriday)
+    {
+
+        if (!$onlyFriday) return time();
+
+
+        $currentDay = date('N', time());
+
+        //1 (for Monday) through 7 (for Sunday)
+        $aDay = 24 * 60 * 60;
+
+        $newTime = time();
+        switch (intval($currentDay)) {
+            case 1: // Monday
+                $newTime = time() + (4 * $aDay);
+                break;
+            case 2: // Tuesday
+                $newTime = time() + (3 * $aDay);
+                break;
+            case 3: // Wednesday
+                $newTime = time() + (2 * $aDay);
+                break;
+            case 4: // Thursday
+                $newTime = time() + (1 * $aDay);
+                break;
+            case 6: // Saturday
+                $newTime = time() + (6 * $aDay);
+                break;
+            case 7: // Sunday
+                $newTime = time() + (5 * $aDay);
+                break;
+        }
+
+
+        $newDay = date('N', $newTime);
+
+        return $newTime;
+    }
+
+    static public function getTimes($instance, $cities, $onlyFriday)
     {
         $time_format = 'h:i A';
         $targetCity = $cities[$instance['city']];
@@ -66,7 +106,8 @@ class SSUtils
         $lat = $targetCity->getLatitude();
         $long = $targetCity->getLongitude();
 
-        $suninfo = date_sun_info(time(), $lat, $long);
+
+        $suninfo = date_sun_info(self::getTime($onlyFriday), $lat, $long);
 
         $convertedSunriseTime = self::convertTimezone($suninfo['sunrise'], $targetCity);
         $convertedSunsetTime = self::convertTimezone($suninfo['sunset'], $targetCity);
