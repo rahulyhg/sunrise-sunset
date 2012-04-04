@@ -3,6 +3,7 @@ Tucson, AZ:33.29:-122.04:MST:MST
 Atlanta, GA:33.65:-84.42:EST:EDT
 Charlotte,NC:35.22:-80.93:EST:EDT
 Chicago, IL:41.51:-87.39:CST:CDT
+Citra,FL:29.41167:-82.11:EST:EDT
 Crossville,TN:35.95:-85.08:CST:CDT
 Los Angeles, CA:34.30:-118.15:PST:PDT
 Lexington, KY:38.05:-85.00:EST:EDT
@@ -11,3 +12,4 @@ Nashville,TN:36.12:-86.68:CST:CDT
 Orlando,FL:28.55:-81.33:EST:EDT
 Richmond,VA:37.50:-77.33:EST:EDT
 Roanoke Muni,VA:37.32:-79.97:EST:EDT
+Waynesville, NC:35.483226:-82.994511:EST:EDT
