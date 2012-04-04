@@ -9,8 +9,6 @@ License: GPLv2
 Displays sunrise and sunset times for the capital cities of the America (including miscellaneous cities).
 Times displayed are local time.
 
-I would love to hear from you: rexposadas@yahoo.com
-
 == Description ==
 Displays sunrise and sunset times for the capital cities of the America (including miscellaneous cities).
 Times displayed are local time.
