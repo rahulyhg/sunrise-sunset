@@ -3,7 +3,7 @@ Contributors: rxn
 Tags: sunrise, sunset, widget
 Requires at least: 3.0
 Tested up to: 3.3.1
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 License: GPLv2
 
 Displays sunrise and sunset times for the capital cities of the America (including miscellaneous cities).
@@ -17,15 +17,15 @@ Times displayed are local time.
 
 IF YOU ARE UPGRADING please change the settings of the widget in the dashboard right after upgrading.
 
-IF YOU ARE A DESIGNER: I am looking for someone to help me skin the widget.  I'll add you to the list of contributors.
+IF YOU ARE A DESIGNER: I would love for someone to skin the widget.  I'll add you to the list of contributors.
 
 Please email me if you have any questions or requests: rexposadas@yahoo.com
 
 Options includes:
-* What city to display.
-* Should sunrise be displayed?
-* Should sunset be displayed?
-* The title display at the top of the widget.
+1. What city to display.
+2. Should sunrise be displayed?
+3. Should sunset be displayed?
+4. The title display at the top of the widget.
 
 
 == Installation ==
@@ -49,9 +49,9 @@ I will try to accommodate you ASAP.
 
 = What updates are planned for this widget? =
 Here are some:
-* Better design.
-* The ability to add images.
-* The ablity to add cities in the Admin Dashboard.
+1. Better design.
+2. The ability to add images.
+3. The ablity to add cities in the Admin Dashboard.
 
 = How do I add more cities to this list? =
 Add a line in the cities.txt file with the following format:
@@ -66,6 +66,9 @@ Miami, FL:25.82:-80.28:EST:EDT
 2. You can adjust the title and the city in the Dashboard. The widget uses local time.
 
 == Changelog ==
+= 1.1.3 =
+* Updated README and screenshot.
+
 = 1.1.2 =
 * Added all capital cities of America.
 
