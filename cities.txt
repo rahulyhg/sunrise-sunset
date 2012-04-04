@@ -1,5 +1,5 @@
 city:latitude:longitude:timezone:summertimezone
-Tucson, AZ:33.29:-122.04:MST:none
+Tucson, AZ:33.29:-122.04:MST:MST
 Atlanta, GA:33.65:-84.42:EST:EDT
 Charlotte,NC:35.22:-80.93:EST:EDT
 Chicago, IL:41.51:-87.39:CST:CDT
