@@ -10,11 +10,11 @@ class City
 
     function __construct($name, $latitude, $longitude, $timezone, $summerTimezone)
     {
-        $this->_name = $name;
-        $this->_latitude = $latitude;
-        $this->_longitude = $longitude;
-        $this->_timezone = $timezone;
-        $this->_summerTimezone = $summerTimezone;
+        $this->_name = trim($name);
+        $this->_latitude = trim($latitude);
+        $this->_longitude = trim($longitude);
+        $this->_timezone = trim($timezone);
+        $this->_summerTimezone = trim($summerTimezone);
     }
 
 

@@ -3,7 +3,7 @@
 Plugin Name: Sunrise Sunset
 Plugin URI: http://wordpress.org/extend/plugins/sunrise-sunset/
 Description: Displays Sunrise and Sunset Times
-Version:  1.1.1
+Version:  1.1.2
 Author: Rex Posadas (rexposadas@yahoo.com)
 Author URI: http://www.rxnfx.com/ss-plugin
 */
@@ -166,45 +166,52 @@ class sunrise_sunset extends WP_Widget
     private function convertTimezone($timestamp, $city)
     {
         $newTimestamp = 0;
-        $daylightSavingsTime = 0;
         $time_format = 'Y-m-d';
-
+        $currentTimezone = $city->getTimezone();
 
         $dstStart = '2012-03-11';
         $dstEnd = '2012-11-04';
         $today = date($time_format, $timestamp);
 
-        if (( ( $today >= $dstStart ) && ( $today <= $dstEnd) )) {
-            $daylightSavingsTime = 1;
+        if ((($today >= $dstStart) && ($today <= $dstEnd))) {
+            $currentTimezone = $city->getSummerTimezone();
         }
 
-        switch ($city->getTimezone()) {
+        switch ($currentTimezone) {
             case 'EST':
-                $newTimestamp = $timestamp - ((5 - $daylightSavingsTime) * 60 * 60);
+                $newTimestamp = $timestamp - (5 * 60 * 60);
                 break;
             case 'EDT':
-                $newTimestamp = $timestamp - ((4 - $daylightSavingsTime) * 60 * 60);
+                $newTimestamp = $timestamp - (4 * 60 * 60);
                 break;
             case 'MST':
-                $newTimestamp = $timestamp - ((7 - $daylightSavingsTime) * 60 * 60);
+                $newTimestamp = $timestamp - (7 * 60 * 60);
+                break;
+            case 'MDT':
+                $newTimestamp = $timestamp - (6 * 60 * 60);
                 break;
             case 'CST':
-                $newTimestamp = $timestamp - ((6 - $daylightSavingsTime) * 60 * 60);
+                $newTimestamp = $timestamp - (6 * 60 * 60);
                 break;
             case 'CDT':
-                $newTimestamp = $timestamp - ((5 - $daylightSavingsTime) * 60 * 60);
+                $newTimestamp = $timestamp - (5 * 60 * 60);
                 break;
             case 'PST':
-                $newTimestamp = $timestamp - ((8 - $daylightSavingsTime) * 60 * 60);
+                $newTimestamp = $timestamp - (8 * 60 * 60);
                 break;
             case 'PDT':
-                $newTimestamp = $timestamp - ((7 - $daylightSavingsTime) * 60 * 60);
+                $newTimestamp = $timestamp - (7 * 60 * 60);
+                break;
+            case 'AKST':
+                $newTimestamp = $timestamp - (9 * 60 * 60);
+                break;
+            case 'AKDT':
+                $newTimestamp = $timestamp - (8 * 60 * 60);
+                break;
+            case 'HAST':
+                $newTimestamp = $timestamp - (10 * 60 * 60);
                 break;
         }
-
-
-        $olddate = date($time_format, $timestamp);
-        $newdate = date($time_format, $newTimestamp);
 
 
         return $newTimestamp;
