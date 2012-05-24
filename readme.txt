@@ -3,7 +3,7 @@ Contributors: rxn
 Tags: sunrise, sunset, widget
 Requires at least: 3.0
 Tested up to: 3.3.1
-Stable tag: 1.1.4
+Stable tag: 1.1.5
 License: GPLv2
 
 Displays sunrise and sunset times for the capital cities in America (including miscellaneous cities).
@@ -70,6 +70,9 @@ Miami, FL:25.82:-80.28:EST:EDT
 2. You can adjust the title and the city in the Dashboard. The widget uses local time.
 
 == Changelog ==
+= 1.1.5 =
+* Added Perth Australian.
+
 = 1.1.4 =
 * Added "Friday" feature.
 * Added Timezone in Display.

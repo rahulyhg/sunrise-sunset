@@ -54,6 +54,9 @@ class SSUtils
             case 'HAST':
                 $newTimestamp = $timestamp - (10 * 60 * 60);
                 break;
+            case 'AWST':
+                $newTimestamp = $timestamp + (8 * 60 * 60);
+                break;
         }
         return array("timestamp" => $newTimestamp, "timezone" => $currentTimezone);
     }

@@ -3,7 +3,7 @@
 Plugin Name: Sunrise Sunset
 Plugin URI: http://wordpress.org/extend/plugins/sunrise-sunset/
 Description: Displays Sunrise and Sunset Times
-Version:  1.1.4
+Version:  1.1.5
 Author: Rex Posadas (rexposadas@yahoo.com)
 Author URI: http://www.rxnfx.com/ss-plugin
 */
