@@ -12,8 +12,8 @@ class SSUtils
         $time_format = 'Y-m-d';
         $currentTimezone = $city->getTimezone();
 
-        $dstStart = '2012-03-11';
-        $dstEnd = '2012-11-04';
+        $dstStart = date('Y') . '-03-11';
+        $dstEnd = date('Y') . '-11-04';
         $today = date($time_format, $timestamp);
 
         if ((($today >= $dstStart) && ($today <= $dstEnd))) {

@@ -90,6 +90,7 @@ class sunrise_sunset extends WP_Widget
         $sunset_checkbox;
         $sunrise_checkbox;
         $friday_checkbox;
+		$hour_offset_checkbox;
 
         if ($instance['showsunset']) {
             $sunset_checkbox = sprintf('<input type="checkbox" name="%s" value="%s" checked/> Display Sunset Time', $field_sunset, $field_sunset);
